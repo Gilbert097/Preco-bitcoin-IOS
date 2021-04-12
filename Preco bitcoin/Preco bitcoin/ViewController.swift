@@ -5,6 +5,7 @@
 //  Created by Gilberto Silva on 11/04/21.
 //
 
+import Foundation
 import UIKit
 
 class ViewController: UIViewController {
@@ -20,7 +21,17 @@ class ViewController: UIViewController {
                     let dataResponse = DataResponse(data: data)
                 else { return }
                 
-                print(dataResponse.coins.count)
+                if let brlCoin = dataResponse.coins.filter({ $0.code == CodeCoins.brl.rawValue}).first {
+                    
+                    let nf = NumberFormatter()
+                    nf.numberStyle = .decimal
+                    nf.locale = Locale(identifier: "pt_BR")
+                    //nf.groupingSeparator = "."
+                    //nf.decimalSeparator = ","
+                    guard let result = nf.string(from: NSNumber(value: brlCoin.latePrice)) else { return }
+                    
+                    print("Code: \(brlCoin.code), LatePrice: \(result)")
+                }
             } else {
                 print("Erro ao fazer a consulta do preço.")
             }

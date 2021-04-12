@@ -24,10 +24,6 @@ public class DataResponse {
                 return CoinDetail(code: key, dictionary: coinDictionary)
             }
             
-            if let brlCoin = self.coins.filter({ $0.code == CodeCoins.brl.rawValue}).first {
-                print("Code: \(brlCoin.code)")
-            }
-            
         } catch {
             print(error.localizedDescription)
             return nil
