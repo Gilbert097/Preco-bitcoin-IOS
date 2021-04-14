@@ -10,32 +10,44 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var priceBitcoinLabel: UILabel!
+    @IBOutlet weak var refreshPriceButton: UIButton!
+    private let bitcoinService = BitcoinService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let url = URL(string: "https://blockchain.info/ticker") else { return }
-        let task = URLSession.shared.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
-            if error == nil {
-                guard
-                    let data = data,
-                    let dataResponse = DataResponse(data: data)
-                else { return }
-                
-                if let brlCoin = dataResponse.coins.filter({ $0.code == CodeCoins.brl.rawValue}).first {
-                    
-                    let nf = NumberFormatter()
-                    nf.numberStyle = .decimal
-                    nf.locale = Locale(identifier: "pt_BR")
-                    //nf.groupingSeparator = "."
-                    //nf.decimalSeparator = ","
-                    guard let result = nf.string(from: NSNumber(value: brlCoin.latePrice)) else { return }
-                    
-                    print("Code: \(brlCoin.code), LatePrice: \(result)")
-                }
-            } else {
-                print("Erro ao fazer a consulta do preço.")
-            }
-        }
-        task.resume()
+        refreshPrice()
     }
+    
+    @IBAction func refreshPriceClick(_ sender: UIButton) {
+        refreshPrice()
+    }
+    
+    private func refreshPrice() {
+        refreshPriceButton.setTitle("Atualizando...", for: .normal)
+        bitcoinService.requestPriceBitcoin { [weak self] (bitcoinBrl) in
+            guard
+                let self = self,
+                let bitcoinBrl = bitcoinBrl,
+                let result = self.formartBitcoinPrice(priceBitcoin: bitcoinBrl.latePrice)
+            else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.refreshPriceButton.setTitle("Atualizar", for: .normal)
+                self.priceBitcoinLabel.text = "\(bitcoinBrl.symbol) \(result)"
+            }
+            
+            print("Code: \(bitcoinBrl.code), LatePrice: \(result)")
+        }
+    }
+    
+    private func formartBitcoinPrice(priceBitcoin: Double) -> String? {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.locale = Locale(identifier: "pt_BR")
+        return nf.string(from: NSNumber(value: priceBitcoin))
+    }
+    
 }

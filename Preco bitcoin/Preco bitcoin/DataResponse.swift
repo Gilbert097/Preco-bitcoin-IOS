@@ -8,7 +8,7 @@
 import Foundation
 
 public class DataResponse {
-    let coins: [CoinDetail]
+    let coins: [BitcoinDetail]
     
     public init?(data: Data){
         do {
@@ -16,12 +16,12 @@ public class DataResponse {
                 let objectJson = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
             else { return nil}
             
-            self.coins = objectJson.map { (item) -> CoinDetail in
+            self.coins = objectJson.map { (item) -> BitcoinDetail in
                 let (key, value) = item
                 guard
                     let coinDictionary = value as? [String: Any]
-                else { return CoinDetail(code: key, dictionary: [:]) }
-                return CoinDetail(code: key, dictionary: coinDictionary)
+                else { return BitcoinDetail(code: key, dictionary: [:]) }
+                return BitcoinDetail(code: key, dictionary: coinDictionary)
             }
             
         } catch {

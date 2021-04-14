@@ -27,15 +27,18 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-zI-hzq">
-                                        <rect key="frame" x="0.0" y="100" width="300" height="66"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="55"/>
+                                        <rect key="frame" x="0.0" y="100" width="300" height="54"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="45"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nki-gh-16L">
-                                        <rect key="frame" x="0.0" y="166" width="300" height="66"/>
+                                        <rect key="frame" x="0.0" y="154" width="300" height="78"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Atualizar"/>
+                                        <connections>
+                                            <action selector="refreshPriceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyU-Ug-3k4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -51,6 +54,10 @@
                             <constraint firstItem="Khf-aL-x00" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aN0-qa-ahp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceBitcoinLabel" destination="KTe-zI-hzq" id="ZvP-mZ-9EA"/>
+                        <outlet property="refreshPriceButton" destination="Nki-gh-16L" id="Qr4-W5-VvC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D404AC6D2626629400DFC328 /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D404AC6C2626629400DFC328 /* BitcoinService.swift */; };
 		D4B3D28A2623BBA20074711B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D2892623BBA20074711B /* AppDelegate.swift */; };
 		D4B3D28C2623BBA20074711B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D28B2623BBA20074711B /* SceneDelegate.swift */; };
 		D4B3D28E2623BBA20074711B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D28D2623BBA20074711B /* ViewController.swift */; };
@@ -14,12 +15,13 @@
 		D4B3D2932623BBA40074711B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4B3D2922623BBA40074711B /* Assets.xcassets */; };
 		D4B3D2962623BBA40074711B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B3D2942623BBA40074711B /* LaunchScreen.storyboard */; };
 		D4B3D29F2623C0620074711B /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D29E2623C0620074711B /* DataResponse.swift */; };
-		D4B3D2A22623E4110074711B /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D2A12623E4110074711B /* CoinDetail.swift */; };
-		D4B3D2A52623E43E0074711B /* CodeCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D2A42623E43E0074711B /* CodeCoins.swift */; };
-		D4B3D2A82623E4660074711B /* CodeCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D2A72623E4660074711B /* CodeCoin.swift */; };
+		D4B3D2A22623E4110074711B /* BitcoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D2A12623E4110074711B /* BitcoinDetail.swift */; };
+		D4B3D2A52623E43E0074711B /* BitcoinCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D2A42623E43E0074711B /* BitcoinCode.swift */; };
+		D4B3D2A82623E4660074711B /* BitcoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3D2A72623E4660074711B /* BitcoinResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D404AC6C2626629400DFC328 /* BitcoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinService.swift; sourceTree = "<group>"; };
 		D4B3D2862623BBA20074711B /* Preco bitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Preco bitcoin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B3D2892623BBA20074711B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4B3D28B2623BBA20074711B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,9 +31,9 @@
 		D4B3D2952623BBA40074711B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4B3D2972623BBA40074711B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4B3D29E2623C0620074711B /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
-		D4B3D2A12623E4110074711B /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
-		D4B3D2A42623E43E0074711B /* CodeCoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoins.swift; sourceTree = "<group>"; };
-		D4B3D2A72623E4660074711B /* CodeCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoin.swift; sourceTree = "<group>"; };
+		D4B3D2A12623E4110074711B /* BitcoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinDetail.swift; sourceTree = "<group>"; };
+		D4B3D2A42623E43E0074711B /* BitcoinCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinCode.swift; sourceTree = "<group>"; };
+		D4B3D2A72623E4660074711B /* BitcoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +74,10 @@
 				D4B3D2942623BBA40074711B /* LaunchScreen.storyboard */,
 				D4B3D2972623BBA40074711B /* Info.plist */,
 				D4B3D29E2623C0620074711B /* DataResponse.swift */,
-				D4B3D2A12623E4110074711B /* CoinDetail.swift */,
-				D4B3D2A42623E43E0074711B /* CodeCoins.swift */,
-				D4B3D2A72623E4660074711B /* CodeCoin.swift */,
+				D4B3D2A12623E4110074711B /* BitcoinDetail.swift */,
+				D4B3D2A42623E43E0074711B /* BitcoinCode.swift */,
+				D4B3D2A72623E4660074711B /* BitcoinResponse.swift */,
+				D404AC6C2626629400DFC328 /* BitcoinService.swift */,
 			);
 			path = "Preco bitcoin";
 			sourceTree = "<group>";
@@ -149,13 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4B3D2A82623E4660074711B /* CodeCoin.swift in Sources */,
+				D404AC6D2626629400DFC328 /* BitcoinService.swift in Sources */,
+				D4B3D2A82623E4660074711B /* BitcoinResponse.swift in Sources */,
 				D4B3D28E2623BBA20074711B /* ViewController.swift in Sources */,
 				D4B3D28A2623BBA20074711B /* AppDelegate.swift in Sources */,
-				D4B3D2A22623E4110074711B /* CoinDetail.swift in Sources */,
+				D4B3D2A22623E4110074711B /* BitcoinDetail.swift in Sources */,
 				D4B3D29F2623C0620074711B /* DataResponse.swift in Sources */,
 				D4B3D28C2623BBA20074711B /* SceneDelegate.swift in Sources */,
-				D4B3D2A52623E43E0074711B /* CodeCoins.swift in Sources */,
+				D4B3D2A52623E43E0074711B /* BitcoinCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
