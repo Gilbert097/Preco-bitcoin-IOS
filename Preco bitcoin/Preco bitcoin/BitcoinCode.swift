@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum CodeCoins: String {
+public enum BitcoinCode: String {
     case usd = "USD"
     case aud = "AUD"
     case brl = "BRL"

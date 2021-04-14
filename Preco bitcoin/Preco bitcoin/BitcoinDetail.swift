@@ -15,7 +15,7 @@ private extension String {
     static let symbol = "symbol"
 }
 
-public class CoinDetail: Codable  {
+public class BitcoinDetail: Codable  {
     let code: String
     let latePrice: Double
     let recentPrice: Double

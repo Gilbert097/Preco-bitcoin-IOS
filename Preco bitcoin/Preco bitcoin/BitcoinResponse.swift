@@ -7,30 +7,30 @@
 
 import Foundation
 
-public class CodeCoin: Codable {
-    var usd: CoinDetail? = nil
-    var aud: CoinDetail? = nil
-    var brl: CoinDetail? = nil
-    var cad: CoinDetail? = nil
-    var chf: CoinDetail? = nil
-    var clp: CoinDetail? = nil
-    var cny: CoinDetail? = nil
-    var dkk: CoinDetail? = nil
-    var eur: CoinDetail? = nil
-    var gbp: CoinDetail? = nil
-    var hkd: CoinDetail? = nil
-    var inr: CoinDetail? = nil
-    var isk: CoinDetail? = nil
-    var jpy: CoinDetail? = nil
-    var krw: CoinDetail? = nil
-    var nzd: CoinDetail? = nil
-    var pln: CoinDetail? = nil
-    var rub: CoinDetail? = nil
-    var sek: CoinDetail? = nil
-    var sgd: CoinDetail? = nil
-    var thb: CoinDetail? = nil
-    var tryCoin: CoinDetail? = nil
-    var twd: CoinDetail? = nil
+public class BitcoinResponse: Codable {
+    var usd: BitcoinDetail? = nil
+    var aud: BitcoinDetail? = nil
+    var brl: BitcoinDetail? = nil
+    var cad: BitcoinDetail? = nil
+    var chf: BitcoinDetail? = nil
+    var clp: BitcoinDetail? = nil
+    var cny: BitcoinDetail? = nil
+    var dkk: BitcoinDetail? = nil
+    var eur: BitcoinDetail? = nil
+    var gbp: BitcoinDetail? = nil
+    var hkd: BitcoinDetail? = nil
+    var inr: BitcoinDetail? = nil
+    var isk: BitcoinDetail? = nil
+    var jpy: BitcoinDetail? = nil
+    var krw: BitcoinDetail? = nil
+    var nzd: BitcoinDetail? = nil
+    var pln: BitcoinDetail? = nil
+    var rub: BitcoinDetail? = nil
+    var sek: BitcoinDetail? = nil
+    var sgd: BitcoinDetail? = nil
+    var thb: BitcoinDetail? = nil
+    var tryCoin: BitcoinDetail? = nil
+    var twd: BitcoinDetail? = nil
     
     enum CodingKeys: String, CodingKey {
         case usd = "USD"
